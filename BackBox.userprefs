@@ -1,0 +1,14 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.IPhoneRetina4_64.7.1" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="BackBox.iOS/BackBox.iOSViewController.cs">
+    <Files>
+      <File FileName="BackBox.iOS/Main.cs" Line="1" Column="1" />
+      <File FileName="BackBox.iOS/BackBox.iOSViewController.cs" Line="65" Column="98" />
+      <File FileName="BackBox.iOS/BackBox.iOSViewController.designer.cs" Line="1" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
