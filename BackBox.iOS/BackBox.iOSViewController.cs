@@ -9,7 +9,8 @@ namespace BackBox.iOS
 {
     public partial class BackBox_iOSViewController : UIViewController
     {
-        const string ApiBase = @"http://172.16.71.128/BackBox.Api/";
+        const string ApiBase = @"http://172.16.71.134/BackBox.Api/";
+        readonly WebClientEx client = new WebClientEx(new CookieContainer()) { BaseAddress = ApiBase };
 
         double MyLat = 0.0, MyLng = 0.0;
 
@@ -40,10 +41,6 @@ namespace BackBox.iOS
 
             Log("Connecting to the service...");
 
-            var client = new WebClientEx(new CookieContainer());
-
-            client.BaseAddress = ApiBase;
-
             var id = client.DownloadString("connect");
 
             Log("Connected.");
@@ -54,6 +51,8 @@ namespace BackBox.iOS
             var locMgr = new CLLocationManager();
             if (CLLocationManager.LocationServicesEnabled)
             {
+                Log("Tracking...");
+
                 locMgr.StartMonitoringSignificantLocationChanges();
 
                 locMgr.LocationsUpdated += (object sender, CLLocationsUpdatedEventArgs e) =>
@@ -72,6 +71,25 @@ namespace BackBox.iOS
             {
                 Log("I can't keep track of you.  Enable me in your phones settings.");
             }
+
+            const int KeyboardHeight = 170;
+
+            inputText.EditingDidBegin += (object sender, EventArgs e) => 
+            {
+                View.Bounds = new RectangleF(new PointF(View.Bounds.X, View.Bounds.Y + KeyboardHeight), View.Bounds.Size);
+            };
+
+            inputText.EditingDidEnd += (object sender, EventArgs e) => 
+            {
+                View.Bounds = new RectangleF(new PointF(View.Bounds.X, View.Bounds.Y - KeyboardHeight), View.Bounds.Size);
+
+                Log("Editing done...");
+                Log(inputText.Text);
+
+                client.DownloadString("send?message=" + inputText.Text);
+
+                inputText.Text = string.Empty;
+            };
         }
 
         public override void ViewWillAppear(bool animated)

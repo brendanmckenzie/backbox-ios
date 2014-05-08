@@ -14,12 +14,20 @@ namespace BackBox.iOS
 	{
 		[Outlet]
 		MonoTouch.UIKit.UITextView displayText { get; set; }
+
+		[Outlet]
+		MonoTouch.UIKit.UITextField inputText { get; set; }
 		
 		void ReleaseDesignerOutlets ()
 		{
 			if (displayText != null) {
 				displayText.Dispose ();
 				displayText = null;
+			}
+
+			if (inputText != null) {
+				inputText.Dispose ();
+				inputText = null;
 			}
 		}
 	}
