@@ -4,12 +4,13 @@ using MonoTouch.Foundation;
 using MonoTouch.UIKit;
 using MonoTouch.CoreLocation;
 using System.Net;
+using System.Threading;
 
 namespace BackBox.iOS
 {
     public partial class BackBox_iOSViewController : UIViewController
     {
-        const string ApiBase = @"http://172.16.71.134/BackBox.Api/";
+        const string ApiBase = @"http://172.16.71.130/BackBox.Api/";
         readonly WebClientEx client = new WebClientEx(new CookieContainer()) { BaseAddress = ApiBase };
 
         double MyLat = 0.0, MyLng = 0.0;
@@ -83,13 +84,25 @@ namespace BackBox.iOS
             {
                 View.Bounds = new RectangleF(new PointF(View.Bounds.X, View.Bounds.Y - KeyboardHeight), View.Bounds.Size);
 
-                Log("Editing done...");
-                Log(inputText.Text);
-
-                client.DownloadString("send?message=" + inputText.Text);
-
-                inputText.Text = string.Empty;
             };
+
+            inputText.ShouldReturn += field =>
+            {
+                if (!string.IsNullOrEmpty(field.Text))
+                {
+                    Log("Editing done...");
+                    Log(string.Format("Sending message at ({1}, {2}): {0}", field.Text, MyLat, MyLng));
+
+                    client.DownloadString(string.Format("send?message={0}&lat={1}&lng={2}", Uri.EscapeUriString(field.Text), MyLat, MyLng));
+
+                    field.Text = string.Empty;
+                }
+
+                field.ResignFirstResponder();
+                return false;
+            };
+                
+            new Timer((a) => { InvokeOnMainThread(() => { UpdateMessages(); }); }, null, 2000, 2000);
         }
 
         public override void ViewWillAppear(bool animated)
@@ -110,6 +123,17 @@ namespace BackBox.iOS
         public override void ViewDidDisappear(bool animated)
         {
             base.ViewDidDisappear(animated);
+        }
+
+        void UpdateMessages()
+        {
+            var data = System.Json.JsonArray.Parse(client.DownloadString("get-latest"));
+
+            foreach (System.Json.JsonObject message in data)
+            {
+                var date = DateTime.Parse(message["Timestamp"]);
+                Log(string.Format("[{0:hhmm}] <{1}> {2}", date, message["User"] ?? "Anonymous", message["Content"]));
+            }
         }
 
         #endregion
