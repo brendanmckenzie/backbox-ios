@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BackBox.iOS", "BackBox.iOS\BackBox.iOS.csproj", "{792427D6-A01D-4E90-840F-5C0FEC6E213C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BackBox.iOS.Tests", "BackBox.iOS.Tests\BackBox.iOS.Tests.csproj", "{7EBC4B08-A7D3-4381-B5D5-CD844BC136B2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|iPhoneSimulator = Debug|iPhoneSimulator
@@ -25,6 +27,18 @@ Global
 		{792427D6-A01D-4E90-840F-5C0FEC6E213C}.Release|iPhone.Build.0 = Release|iPhone
 		{792427D6-A01D-4E90-840F-5C0FEC6E213C}.Release|iPhoneSimulator.ActiveCfg = Release|iPhoneSimulator
 		{792427D6-A01D-4E90-840F-5C0FEC6E213C}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
+		{7EBC4B08-A7D3-4381-B5D5-CD844BC136B2}.Ad-Hoc|iPhone.ActiveCfg = Release|Any CPU
+		{7EBC4B08-A7D3-4381-B5D5-CD844BC136B2}.Ad-Hoc|iPhone.Build.0 = Release|Any CPU
+		{7EBC4B08-A7D3-4381-B5D5-CD844BC136B2}.AppStore|iPhone.ActiveCfg = Release|Any CPU
+		{7EBC4B08-A7D3-4381-B5D5-CD844BC136B2}.AppStore|iPhone.Build.0 = Release|Any CPU
+		{7EBC4B08-A7D3-4381-B5D5-CD844BC136B2}.Debug|iPhone.ActiveCfg = Debug|Any CPU
+		{7EBC4B08-A7D3-4381-B5D5-CD844BC136B2}.Debug|iPhone.Build.0 = Debug|Any CPU
+		{7EBC4B08-A7D3-4381-B5D5-CD844BC136B2}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
+		{7EBC4B08-A7D3-4381-B5D5-CD844BC136B2}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
+		{7EBC4B08-A7D3-4381-B5D5-CD844BC136B2}.Release|iPhone.ActiveCfg = Release|Any CPU
+		{7EBC4B08-A7D3-4381-B5D5-CD844BC136B2}.Release|iPhone.Build.0 = Release|Any CPU
+		{7EBC4B08-A7D3-4381-B5D5-CD844BC136B2}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
+		{7EBC4B08-A7D3-4381-B5D5-CD844BC136B2}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
 		StartupItem = BackBox.iOS\BackBox.iOS.csproj
