@@ -7,3 +7,7 @@
 # Pods/
 bin/
 obj/
+
+.DS_Store
+packages
+Components
