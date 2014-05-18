@@ -1,19 +1,14 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.IPhoneRetina4_64.7.1" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="BackBox.iOS/BackBox.iOSViewController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="BackBox.iOS/Info.plist">
     <Files>
-      <File FileName="BackBox.iOS/BackBox.iOSViewController.cs" Line="98" Column="14" />
+      <File FileName="BackBox.iOS/MessageView/MessageCell.cs" Line="53" Column="32" />
+      <File FileName="BackBox.iOS/MessageView/PrettyViewController.cs" Line="90" Column="47" />
+      <File FileName="BackBox.iOS/MessageView/MessageTableDataSource.cs" Line="56" Column="13" />
+      <File FileName="BackBox.iOS/Helpers/ViewExtensions.cs" Line="17" Column="14" />
+      <File FileName="BackBox.iOS/AppDelegate.cs" Line="72" Column="28" />
+      <File FileName="BackBox.iOS/Info.plist" />
     </Files>
-    <Pads>
-      <Pad Id="ProjectPad">
-        <State expanded="True">
-          <Node name="BackBox.iOS" expanded="True">
-            <Node name="ComponentReferenceFolder" expanded="True" />
-            <Node name="BackBox.iOSViewController.cs" selected="True" />
-          </Node>
-        </State>
-      </Pad>
-    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />

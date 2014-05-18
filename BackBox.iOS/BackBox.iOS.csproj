@@ -103,11 +103,15 @@
   <ItemGroup>
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
-    <Compile Include="BackBox.iOSViewController.cs" />
-    <Compile Include="BackBox.iOSViewController.designer.cs">
-      <DependentUpon>BackBox.iOSViewController.cs</DependentUpon>
-    </Compile>
     <Compile Include="WebClientEx.cs" />
+    <Compile Include="Message.cs" />
+    <Compile Include="MessageView\MessageCell.cs" />
+    <Compile Include="MessageView\MessageTableDataSource.cs" />
+    <Compile Include="Helpers\ViewExtensions.cs" />
+    <Compile Include="MessageView\MessageViewController.cs" />
+    <Compile Include="MessageView\MessageViewController.designer.cs">
+      <DependentUpon>MessageViewController.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="MainStoryboard.storyboard" />
@@ -115,9 +119,12 @@
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
     <XamarinComponentReference Include="json.net">
-      <InstallationInProgress>True</InstallationInProgress>
       <Version>4.5.11</Version>
       <Visible>False</Visible>
     </XamarinComponentReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="MessageView\" />
+    <Folder Include="Helpers\" />
   </ItemGroup>
 </Project>
