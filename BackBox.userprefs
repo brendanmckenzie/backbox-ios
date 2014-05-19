@@ -1,14 +1,31 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.IPhoneRetina4_64.7.1" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="BackBox.iOS/Info.plist">
+  <MonoDevelop.Ide.Workbench ActiveDocument="BackBox.iOS/MessageView/MessageViewController.cs">
     <Files>
-      <File FileName="BackBox.iOS/MessageView/MessageCell.cs" Line="53" Column="32" />
-      <File FileName="BackBox.iOS/MessageView/PrettyViewController.cs" Line="90" Column="47" />
-      <File FileName="BackBox.iOS/MessageView/MessageTableDataSource.cs" Line="56" Column="13" />
-      <File FileName="BackBox.iOS/Helpers/ViewExtensions.cs" Line="17" Column="14" />
-      <File FileName="BackBox.iOS/AppDelegate.cs" Line="72" Column="28" />
+      <File FileName="BackBox.iOS/MessageView/MessageCell.cs" Line="1" Column="1" />
+      <File FileName="BackBox.iOS/MessageView/MessageTableDataSource.cs" Line="1" Column="1" />
+      <File FileName="BackBox.iOS/Helpers/ViewExtensions.cs" Line="1" Column="1" />
+      <File FileName="BackBox.iOS/AppDelegate.cs" Line="1" Column="1" />
       <File FileName="BackBox.iOS/Info.plist" />
+      <File FileName="BackBox.iOS/MessageView/MessageViewController.cs" Line="9" Column="22" />
     </Files>
+    <Pads>
+      <Pad Id="MonoDevelop.NUnit.TestPad">
+        <State expanded="True">
+          <Node name="BackBox.iOS.Tests" expanded="True">
+            <Node name="BackBox" expanded="True">
+              <Node name="iOS" expanded="True">
+                <Node name="Tests" expanded="True">
+                  <Node name="Test" expanded="True">
+                    <Node name="TestCase" selected="True" />
+                  </Node>
+                </Node>
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
